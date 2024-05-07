@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_lottie import st_lottie
+import requests
 import base64
 import time
 #python -m pipreqs.pipreqs
@@ -17,11 +18,19 @@ def autoplay(AudioFile):  #Autoplay audio
         """
 
     st.components.v1.html(html_string)
+
+def load_lottieurl(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
 st.set_page_config(page_title = "Rafiq", page_icon = ":robot_face:")
 
 def page_1():
     with st.container():
-        st_lottie("https://lottie.host/61c87b55-4ec6-44a4-bcf0-b5b04290b5ea/Qel5MP9yiV.json")
+        lottie_coding = load_lottieurl("https://lottie.host/61c87b55-4ec6-44a4-bcf0-b5b04290b5ea/Qel5MP9yiV.json")
+        st_lottie(lottie_coding)
 
         begin = st.button("Begin", use_container_width=True)
 
