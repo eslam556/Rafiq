@@ -37,6 +37,7 @@ def page_1():
 
         if begin:
             st.session_state["current_page"] = "page2"
+            st.rerun()
 
 def page_2():
     with st.container():
@@ -49,6 +50,7 @@ def page_2():
 
         if login:
             st.session_state["current_page"] = "page3"
+            st.rerun()
         
         autoplay(1)
 
@@ -65,6 +67,7 @@ def page_3():
             
             if code == "0000":
                 st.session_state["current_page"] = "page4"
+                st.rerun()
             else:
                 st.markdown("<p style='text-align: center; color: red;'>Invalid code. Please try again.</p>", unsafe_allow_html=True)
                 autoplay(4)
@@ -95,27 +98,35 @@ def page_4():
         if R101:
             st.session_state["current_page"] = "page5"
             print("R101")
+            st.rerun()
         elif R102:
             st.session_state["current_page"] = "page5"
             print("R102")
+            st.rerun()
         elif R103:
             st.session_state["current_page"] = "page5"
             print("R103")
+            st.rerun()
         elif R104:
             st.session_state["current_page"] = "page5"
             print("R104")
+            st.rerun()
         elif R105:
             st.session_state["current_page"] = "page5"
             print("R105")
+            st.rerun()
         elif R106:
             st.session_state["current_page"] = "page5"
             print("R106")
+            st.rerun()
         elif R107:
             st.session_state["current_page"] = "page5"
             print("R107")
+            st.rerun()
         elif R108:
             st.session_state["current_page"] = "page5"
             print("R108")
+            st.rerun()
 
         autoplay(3)
 
@@ -130,8 +141,10 @@ def page_5():
 
         if confirm:
             st.session_state["current_page"] = "page6"
+            st.rerun()
         elif discrad:
             st.session_state["current_page"] = "page1"
+            st.rerun()
 
         autoplay(5)
 
@@ -145,6 +158,7 @@ def page_6():
 
         if order_again:
             st.session_state["current_page"] = "page4"
+            st.rerun()
 
         autoplay(6)
 
