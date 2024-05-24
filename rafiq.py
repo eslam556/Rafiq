@@ -52,7 +52,11 @@ def page_2():
             st.session_state["current_page"] = "page3"
             st.rerun()
         
-        autoplay(1)
+        n = 1
+
+        if n == 1:
+            autoplay(1)
+            n += 1
 
 def page_3():
     with st.container():
@@ -143,7 +147,7 @@ def page_5():
             st.session_state["current_page"] = "page6"
             st.rerun()
         elif discrad:
-            st.session_state["current_page"] = "page1"
+            st.session_state["current_page"] = "page4"
             st.rerun()
 
         autoplay(5)
