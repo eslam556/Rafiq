@@ -46,15 +46,13 @@ def page_2():
         
         st.markdown("""<center> Welcome <br> How can i help you? </center>""", True)
 
-        autoplay(1)
-
         login = st.button("Login", use_container_width=True)
 
         if login:
             st.session_state["current_page"] = "page3"
             st.rerun()
         
-        
+        autoplay(1)
 
 def page_3():
     with st.container():
